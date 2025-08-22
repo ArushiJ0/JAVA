@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class BasicKeywords{
 public static void main(String[] args){
 String string = "I am studying in SRM University";
