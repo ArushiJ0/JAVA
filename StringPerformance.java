@@ -35,5 +35,7 @@ public static String concatenateWithStringBuilder(int iterations){
 }
 public statis void StringBuilderMethods(){
     StringBuilder sb = new StringBuilder("This is Java ");
-    
+
 }
+}
+    
