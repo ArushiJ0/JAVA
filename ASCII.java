@@ -8,7 +8,7 @@ public class ASCII {
             char ch = string.charAt(i);
             int ASCII = (int) ch;
 
-            System.out.println("\nCharacter: " + ch + " | ASCII: " + ASCII);
+            System.out.println("\nCharacter: " + ch + " \nASCII: " + ASCII);
             if (Character.isUpperCase(ch)) {
                 System.out.println("Type: Uppercase Letter");
                 System.out.println("Lowercase: " + Character.toLowerCase(ch) +
@@ -18,7 +18,7 @@ public class ASCII {
             else if (Character.isLowerCase(ch)) {
                 System.out.println("Type: Lowercase Letter");
                 System.out.println("Uppercase: " + Character.toUpperCase(ch) +
-                                   " | ASCII: " + (int) Character.toUpperCase(ch));
+                                   " \nASCII: " + (int) Character.toUpperCase(ch));
                 System.out.println("Difference: " + ((int) Character.toUpperCase(ch) - ASCII));
             }
             else if (Character.isDigit(ch)) {
@@ -33,7 +33,6 @@ public class ASCII {
             for (int j = 65; j <= i; j++) {
                 System.out.print((char) j + " ");
             }
-            System.out.println();
         }
 
  String message = "HELLO";
