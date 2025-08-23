@@ -36,23 +36,22 @@ public class ASCII {
             System.out.println();
         }
 
-        // Simple Caesar Cipher (Shift by 3)
-        System.out.print("\nEnter text to encrypt (Caesar Cipher): ");
-        String text = scanner.nextLine();
-        int shift = 3;
-        StringBuilder encrypted = new StringBuilder();
-
-        for (int i = 0; i < text.length(); i++) {
-            char ch = text.charAt(i);
-            if (Character.isLetter(ch)) {
-                char base = Character.isLowerCase(ch) ? 'a' : 'A';
-                ch = (char) ((ch - base + shift) % 26 + base);
-            }
-            encrypted.append(ch);
-        }
-
-        System.out.println("Encrypted text: " + encrypted);
-
-        scanner.close();
-    }
+ String message = "HELLO";
+String encrypted = caesarCipher(message, 3);
+System.out.println("Caesar cipher '" + message + "' -> '" +
+encrypted + "'");
+}
+public static String caesarCipher(String text, int shift) {
+String result = "";
+for (char c : text.toCharArray()) {
+if (c >= 'A' && c <= 'Z') {
+result += (char)((c - 'A' + shift) % 26 + 'A');
+} else if (c >= 'a' && c <= 'z') {
+result += (char)((c - 'a' + shift) % 26 + 'a');
+} else {
+result += c;
+}
+}
+return result;
+}
 }
