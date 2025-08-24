@@ -39,6 +39,7 @@ public class ASCII {
 String encrypted = caesarCipher(message, 3);
 System.out.println("Caesar cipher '" + message + "' -> '" +
 encrypted + "'");
+scanner.close();
 }
 public static String caesarCipher(String text, int shift) {
 String result = "";
